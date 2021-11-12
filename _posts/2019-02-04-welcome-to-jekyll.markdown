@@ -9,8 +9,7 @@ Underdog Labs is a community lead blog on all things crypto, smart comntracts an
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-<iframe src="https://lunarcrush-widgets.firebaseapp.com/galaxy?key={API_KEY_HERE}&symbol=BTC&interval=1 Week&animation=false&theme=light" id="galaxy-score" frameBorder="0" border="0" cellspacing="0" scrolling="no" style="width: 100%; height: 300px;"></iframe>
-<iframe src="https://lunarcrush-widgets.firebaseapp.com/wordcloud?key={API_KEY_HERE}&symbol=BTC&interval=1 Week&animation=false&theme=light" id="wordcloud" frameBorder="0" border="0" cellspacing="0" scrolling="no" style="width: 100%; height: 300px;"></iframe>
+<iframe allowfullscreen id="wallsio-iframe" src="https://my.walls.io/c5ypu?nobackground=1&amp;show_header=0" style="border:0;height:800px;width:100%" loading="lazy" title="My social wall"></iframe>
 
 {% highlight ruby %}
 def print_hi(name)
