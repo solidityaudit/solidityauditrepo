@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Powerful things you can do with the Markdown editor"
-author: jane
+title:  "How to Launch your own ERC-20 Fungible Token from Scratch"
+author: Jane
 categories: [ Jekyll, tutorial ]
-image: https://images.unsplash.com/photo-1528784351875-d797d86873a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
-tags: [summer]
+image: https://thumbs.dreamstime.com/z/russia-moscow-businessman-holding-tablet-logo-erc-official-protocol-ethereum-eth-network-standard-creating-tokens-219590148.jpg
+tags: [ERC-20, Tokens, Smart Contracts]
 ---
 There are lots of powerful things you can do with the Markdown editor. If you've gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!
 
@@ -20,9 +20,9 @@ As well as bold and italics, you can also use some other special formatting in M
 + \*escaped characters\*
 
 
-## Writing code blocks
+## How to Launch your own Smart Contract on Mainnet Step by Step
 
-There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, `like this`. Larger snippets of code can be displayed across multiple lines using triple back ticks:
+In this tutorial I will show you how to launch your own project end to end. 
 
 ```
 .my-link {
