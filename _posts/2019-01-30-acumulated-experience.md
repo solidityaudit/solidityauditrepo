@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Accumulated experience of social living"
+title:  "What does an audit look like?"
 author: sal
 categories: [ Jekyll, tutorial ]
 image: assets/images/15.jpg
