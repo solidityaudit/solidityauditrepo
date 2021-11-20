@@ -41,6 +41,10 @@ Link to Crypto Zombies: An online school for learning about solidity:
 
 https://cryptozombies.io
 
+# Tools required for Smart Contract Development
+
+![Remix IDE]({{ BASE_PATH }}/assets/images/metamask-remix.png)
+
 # Key Take-aways
 
 * ERC-20 is an open standard for smart contracts running on the Ethereum blockchain
