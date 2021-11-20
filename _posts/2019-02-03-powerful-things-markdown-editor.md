@@ -27,7 +27,7 @@ There are many well known smart contract projects that use the ERC-20 standard b
 
 # Anatomy of an ERC-20 contract
 
-Let’s take a look at a example ERC-20 contract. For this exercise we can look at Open Zeppelin, an open-source framework for developing secure smart contracts. It’s important to emphasize here that developing a smart contract is only half the battle and before you deploy your contract it needs to be secure and free from logical errors and other bugs that may not be obvious without an audit. One of the ways we can ensure your contract meets certain security best practices and to increase the confidence investors have your smart contract is with an audit which we offer as a service.
+Let’s take a look at a example ERC-20 contract. For this exercise we can look at Open Zeppelin, an open-source framework for developing secure smart contracts. It’s important to emphasize here that developing a smart contract is only half the battle and before you deploy your contract it needs to be secure and free from logical errors and other bugs that may not be obvious without an audit. One of the ways you can increase the confidence investors have in your smart contract is with an audit which we offer as a service.
 
 Open Zeppelin can help developers by making available high quality modules in Solidity like Safe Math library or entire modules that implement ERC-20 standard functionality and allow contract authors to inherit this high quality code. 
 
