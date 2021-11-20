@@ -14,7 +14,7 @@ ERC-20 token contract keeps track of fungible tokens: any one token is exactly e
 
 Unlike Ethereum or Bitcoin which have their own blockchains, ERC-20 run on Ethereum blockchain. This is not to diminish the importance of ERC-20 because it's not a blockchain, in fact ERC-20 is a technical standard and one one smart contracts on the Ethereum blockchain must conform. If you were curious how a project like Chainlink or Tether were created look no further than the ERC-20 standard which allows developers to ceate smart contracts in a language like Solidity to send, receive and transfer value across the Ethereum network. 
 
-#What are some examples of projecs that use ERC-20 smart contracts?
+# What are some examples of projecs that use ERC-20 smart contracts?
 
 There are many well known smart contract projects that use the ERC-20 standard but of course you can create your own too. Here are a few that are top of the list:
 
