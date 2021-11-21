@@ -36,11 +36,15 @@ contract RolloverExample {
     }
 }
 
-# Installing Solidity 
+# Installing Solidity and the Security Toolbox by Trail of Bits
 
 The first step is to install the correct version of solidity compiler, I'd recommend using docker containers for this (I'm on a MAC book air with an Apple Silicon so I had some issues running containers built for intel or amd 64 architectures but you can also use emulation on QEMU if you're so inclined). 
 
-You can also download slither at: 
+You can also download the docker image with a number of useful static analysis tools intalled at: https://hub.docker.com/r/trailofbits/eth-security-toolbox
+
+do a docker pull trailofbits/eth-security-toolbox
+
+then make sure to mount a volume with your solidity contract you want to test.
 
 # What are static analysis tools?
 
