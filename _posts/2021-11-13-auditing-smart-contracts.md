@@ -15,6 +15,31 @@ Smart contracts can have subtle bugs that can be exploited once the contract is 
 + ==highlight==
 + \*escaped characters\*
 
+# Example of a static analysis audit generated with our toolbox
+
+
+Pragma version0.8.0 (contract.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6
+solc-0.8.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+decrement() should be declared external:
+	- RolloverExample2.decrement() (contract.sol#7-9)
+increment() should be declared external:
+	- RolloverExample2.increment() (contract.sol#11-13)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+
+
+https://github.com/crytic/slither
+
+# Installing Solidity differnet versions on Mac
+
+QEMU emulator. Can't run fusion on Mac. Emulator required. 
+
+solc-select <version> in pragma.
+    
+# Different behaviour differnet versions of Soidity. Not backwards compatible
+
+https://hub.docker.com/r/trailofbits/eth-security-toolbox
 
 ## What bugs could exist in a smart contract? 
 
