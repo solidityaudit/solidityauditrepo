@@ -27,13 +27,28 @@ There are many well known smart contract projects that use the ERC-20 standard b
 
 # Anatomy of an ERC-20 contract
 
-Let’s take a look at a example ERC-20 contract. For this exercise we can look at Open Zeppelin, an open-source framework for developing secure smart contracts. It’s important to emphasize here that developing a smart contract is only half the battle and before you deploy your contract it needs to be secure and free from logical errors and other bugs that may not be obvious without an audit. One of the ways you can increase the confidence investors have in your smart contract is with an audit which we offer as a service.
+Let’s take a look at a example ERC-20 contract. For this exercise we can look at Open Zeppelin, an open-source framework for developing secure smart contracts. It’s important to emphasize here that developing a smart contract is only half the battle and before you deploy your contract it needs to be secure and free from logical errors and other bugs that may not be obvious without an audit. One of the ways you can increase the confidence investors have in your smart contract is with an audit which we offer as a service. Some examples of security vulnerabilities that can arise with smart contracts include:
+
+- re-entrancy
+- unauthorized access
+- overflow/underflow
+- business logic errors
 
 Open Zeppelin can help developers by making available high quality modules in Solidity like Safe Math library or entire modules that implement ERC-20 standard functionality and allow contract authors to inherit this high quality code. 
 
 # How are Smart Contracts developed?
 
 In the next part of our series we will look at tools for developing a simple smart contract and deploy a smart contract to a test network. As we advance we can talk about auditing our smart contracts for security vulnerabilities, logical bugs, writing formal tests and using post-deployment monitoring tools to help avoid common security issues like re-entrancy, unauthorized access or logical errors. Below is a trivial smart contract (do not purchase as it is just an example) we wrote using the browser based IDE (Integrated Development Environment) Remix. Many other tools like Hardhat or Truffle exist to help deploy and test smart contracts.
+
+Some of the tools used to develop smart contracts or used by developers of smart contracts include:
+
+- Atom (with Ethereum extensions) or Remix (in browser)
+- Metamask (a wallet with web3 provider)
+- Hardhat (especially useful for maintaining different versions of Solidity compiler on your system)
+- Truffle 
+- Open Zeppelin example SafeMath for solidity <= 0.8.0
+- ChainLink for working with oracles example price lists
+- GraphQL - for querying data about your contract once deployed to blockchain 
 
 ![Remix IDE]({{ BASE_PATH }}/assets/images/metamask-remix.png)
 
