@@ -9,7 +9,7 @@ image: https://image.shutterstock.com/z/stock-photo-macro-photo-of-tooth-wheel-m
 
 ## Why do we need to audit smart contracts?
 
-Smart contracts can have subtle bugs, errors in business logic and vulnerabilities that can be exploited once the contract is deployed. Unlike other software where if a bug is found in a production environment, a hotfix can be deployed immediately, once your contract is on the blockchain it exists on teh blockchain forever. This is by design because it ensures the rules of the contract are followed and cannot be changed arbitrarily by a third party or even by the owner of the contract, but it creates a technical challenge. The best way to address this technical challenge is to audit your smart contracts prior to deploying them so you can identify and fix any security vulneriabilities. In fact, up to 75% of smart contracts do not have audits or are using fake audits so a good investor should always look for an audit and do their own research. 
+Smart contracts can have subtle bugs, errors in business logic and vulnerabilities that can be exploited once the contract is deployed. Unlike other software where if a bug is found in a production environment, a hotfix can be deployed immediately, once your contract is on the blockchain it exists on teh blockchain forever. This is by design because it ensures the rules of the contract are followed and cannot be changed arbitrarily by a third party or even by the owner of the contract, but it creates a technical challenge. The best way to address this technical challenge is to audit your smart contracts prior to deploying them so you can identify and fix any security vulneriabilities. In fact, up to 75% of smart contracts do not have audits or are using fake audits so a good investor should always look for an audit and do their own research [1].
 
 # Integer underflow and Integer Overflow in Solidity
 
@@ -36,7 +36,36 @@ contract RolloverExample {
     }
 }
 
-# Installing Solidity and the Security Toolbox by Trail of Bits
+# Installing Solidity Compiler
+
+Here is the documentation (https://docs.soliditylang.org/en/v0.8.9/installing-solidity.html) you will want to read before you install the Solidity compiler on your machine. I'm using a Mac and the easiest way for me was the following (if you're on Windows or Linux this step will be different):
+
+	brew update
+	brew upgrade
+	brew tap ethereum/ethereum
+	brew install solidity
+
+However, installing solidity globally makes things difficult to test. If you're like me, you have contracts that use different versions of solidity, some functionality is not backwards compatible and so I actually took this a step further and used a docker image with multiple versions of solidity installed. then mount a volume on my host machine with the contracts I want to test and run any security tool(s) I wanted. Since I want this tutorial to be beginner friendly, I'd recommend installing Security Toolbox by Trail of Bits which even has a command select-solc to select version of solidity you want to test against. 
+
+# Installing Security Toolbox by Trail of Bits
+
+Step 1: Remember to mount a volume on your host machine where you stored the solidity contract that you want to test. Slither can also run multiple files at the same time for quicker iteration with the commands:
+
+docker pull trailofbits/eth-security-toolbox
+docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
+
+![rollover]({{ BASE_PATH }}/assets/images/splash.png)
+
+Step 2: Run slither with the command 
+
+	slither <contract name>. 
+	
+	If you need to set your version of solidity compiler (a number come pre-installed in the docker image), use the command
+
+	select-solc <version>
+	
+![rollover]({{ BASE_PATH }}/assets/images/staticanalyzer.png)
+
 
 The first step is to install the correct version of solidity compiler, I'd recommend using docker containers for this (I'm on a MAC book air with an Apple Silicon so I had some issues running containers built for intel or amd 64 architectures but you can also use emulation on QEMU if you're so inclined). 
 
@@ -68,8 +97,5 @@ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-
 
 From the simple static analysis we can gather that we should probably use an older version of Solidity, one that is perhaps more stable like 0.7.6. This might answer a question I had earlier about why you often seen older versions of solidity in the wild, it' because they're battle tested and thus more trustworthy. 
 
-Another problem we see is we forgot to add the eternal declaration to our decrement and increment functions. This saves us some gas because these functions are never called by our contract. 
+Another problem we see is we forgot to add the eternal declaration to our decrement and increment functions. This saves us some gas because these functions are never called by our contract. It also links us to some Slither documentation we can read to learn more about this result. 
 
-## Reference lists
-
-## What types of audits exist? 
