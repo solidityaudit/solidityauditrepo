@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Anatomy of a Solidity Contract Audit"
-categories: [ security audit, tutorial ]
+title:  "Tntroduction to Security Tools and Static Analysis for Solidity Smart Contracts"
+categories: [ security audit, tutorial, solidity, security, static analysis]
 image: https://image.shutterstock.com/z/stock-photo-macro-photo-of-tooth-wheel-mechanism-with-audit-analysis-review-data-report-client-and-asset-741348823.jpg
 ---
 
@@ -11,13 +11,13 @@ image: https://image.shutterstock.com/z/stock-photo-macro-photo-of-tooth-wheel-m
 
 Smart contracts can have subtle bugs, errors in business logic and vulnerabilities that can be exploited once the contract is deployed. Unlike other software where if a bug is found in a production environment, a hotfix can be deployed immediately, once your contract is on the blockchain it exists on teh blockchain forever. This is by design because it ensures the rules of the contract are followed and cannot be changed arbitrarily by a third party or even by the owner of the contract, but it creates a technical challenge. The best way to address this technical challenge is to audit your smart contracts prior to deploying them so you can identify and fix any security vulneriabilities. In fact, up to 75% of smart contracts do not have audits or are using fake audits so a good investor should always look for an audit and do their own research [1].
 
-# Integer underflow and Integer Overflow in Solidity
+# Example Vulnerability: Integer underflow and Integer Overflow in Solidity
 
 In previous versions of Solidity (prior Solidity 0.8.x) an integer would automatically roll-over to a lower or higher number. If you would decrement 0 by 1 (0-1) on an unsigned integer, the result would not be -1, or an error, the result would simple be: MAX(uint). In versions 0.8.x of the solidity compiler, this problem is addressed as you need an unchecked keyword if you want integers to rollover. In other words, decrementing an integer 
 
 In our previous example worked with uint256, but bear with me for a moment. Uint8 is going from 0 to 2^8 - 1. In other words: uint8 ranges from 0 to 255. If you increment 255 it will automatically be 0, if you decrement 0, it will become 255. No warnings, no errors. For example, this can become problematic, if you store a token-balance in a variable and decrement it without checking, or worse, exposed a public method that can decrement your balance indefinitely perhaps unintentionally via a re-entrancy vulnerability, eventually the balance would wrap around to MAX(uint) and your contract would have a major security flaw. 
 
-# Static Analysis to the Rescue
+# Introducing Static Analysis Tools
 
 Let's take a look at a contract that has this flaw. Note that the version of solidity is important, this is given in the pragma after the SPDX-License-Identifier. Because we're using 0.8.0 this contract will not rollover but if we changed version to 0.7.0 and deployed this to main net, it would be extremely insecure. In addition there are several other issues with this contract that we can pick up via a tool like Slither. Let's install solidity and run Slither on the following contract:
 
@@ -35,6 +35,7 @@ contract RolloverExample {
         myUint8++;
     }
 }
+
 
 # Installing Solidity Compiler
 
@@ -58,12 +59,15 @@ docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
 
 Step 2: Run slither with the command 
 
-	slither <contract name>. 
+	code { 
+	slither contract.sol
+	}
 	
 	If you need to set your version of solidity compiler (a number come pre-installed in the docker image), use the command
 
-	select-solc <version>
-	
+	code { 
+	select-solc 0.8.0
+	}
 ![rollover]({{ BASE_PATH }}/assets/images/staticanalyzer.png)
 
 
