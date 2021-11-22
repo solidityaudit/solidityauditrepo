@@ -9,7 +9,7 @@ image: https://image.shutterstock.com/z/stock-photo-macro-photo-of-tooth-wheel-m
 
 ## Why do we need to audit smart contracts?
 
-Smart contracts can have subtle bugs, errors in business logic and vulnerabilities that can be exploited once the contract is deployed. Unlike other software where if a bug is found in a production environment, a hotfix can be deployed immediately, once your contract is on the blockchain it exists on teh blockchain forever. This is by design because it ensures the rules of the contract are followed and cannot be changed arbitrarily by a third party or even by the owner of the contract, but it creates a technical challenge. The best way to address this technical challenge is to audit your smart contracts prior to deploying them so you can identify and fix any security vulneriabilities. In fact, up to 75% of smart contracts do not have audits or are using fake audits so a good investor should always look for an audit and do their own research[^1].
+Smart contracts can have subtle bugs, errors in business logic and vulnerabilities that can be exploited once the contract is deployed. Unlike other software where if a bug is found in a production environment, a hotfix can be deployed immediately, once your contract is on the blockchain it exists on teh blockchain forever. This is by design because it ensures the rules of the contract are followed and cannot be changed arbitrarily by a third party or even by the owner of the contract, but it creates a technical challenge. The best way to address this technical challenge is to audit your smart contracts prior to deploying them so you can identify and fix any security vulneriabilities. In fact, up to 75% of smart contracts do not have audits or are using fake audits so a good investor should always look for an audit and do their own research.
 
 # Example Vulnerability: Integer underflow and Integer Overflow in Solidity
 
@@ -106,8 +106,11 @@ Another problem we see is we forgot to add the eternal declaration to our decrem
 
 Regularly scanning our code using linters or static analyzers like Slither will make us better coders. However, it is no replacement for a thorough security audit done by a professional.
 
+# Key Take-aways
 
-# References:
+* Static Analysis tools and Linters can help developers catch warnings and bugs before contracts are deployed
+* A static analysis tool is no substitute for a thorough security audit by a team of professionals
+* Docker containers are a useful tool for security audtiors to install common tools, compiler versions and run assessments on smart contracts
+* Slither is a popular static analysis tool you can use to improve your coding and understanding of Solidity 
 
-https://hub.docker.com/r/trailofbits/eth-security-toolbox
-https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
