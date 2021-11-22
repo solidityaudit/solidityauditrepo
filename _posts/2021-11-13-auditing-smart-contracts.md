@@ -45,12 +45,12 @@ In addition there are several other issues with this contract that we can pick u
 
 Here is the documentation (https://docs.soliditylang.org/en/v0.8.9/installing-solidity.html) you will want to read before you install the Solidity compiler on your machine. I'm using a Mac and the easiest way for me was the following (if you're on Windows or Linux this step will be different):
 
-	code { 
+	
 	brew update
 	brew upgrade
 	brew tap ethereum/ethereum
 	brew install solidity
-	}
+	
 	
 However, installing solidity globally makes things difficult to test. If you're like me, you have contracts that use different versions of solidity, some functionality is not backwards compatible and so I actually took this a step further and used a docker image with multiple versions of solidity installed. then mount a volume on my host machine with the contracts I want to test and run any security tool(s) I wanted. Since I want this tutorial to be beginner friendly, I'd recommend installing Security Toolbox by Trail of Bits which even has a command select-solc to select version of solidity you want to test against. 
 
@@ -62,10 +62,10 @@ You can also download the docker image pre-built with a number of useful static 
 
 Step 1: Remember to mount a volume on your host machine where you stored the solidity contract that you want to test. Slither can also run multiple files at the same time for quicker iteration with the commands:
 
-	code { 
+	
 	docker pull trailofbits/eth-security-toolbox
 	docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
-	}
+	
 
 ![rollover]({{ BASE_PATH }}/assets/images/splash.png)
 
