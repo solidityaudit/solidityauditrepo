@@ -60,14 +60,13 @@ docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
 Step 2: Run slither with the command 
 
 	code { 
+	select-solc 0.8.0
+	}
+	code { 
 	slither contract.sol
 	}
 	
-	If you need to set your version of solidity compiler (a number come pre-installed in the docker image), use the command
-
-	code { 
-	select-solc 0.8.0
-	}
+	
 ![rollover]({{ BASE_PATH }}/assets/images/staticanalyzer.png)
 
 
