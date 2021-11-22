@@ -41,19 +41,25 @@ contract RolloverExample {
 
 Here is the documentation (https://docs.soliditylang.org/en/v0.8.9/installing-solidity.html) you will want to read before you install the Solidity compiler on your machine. I'm using a Mac and the easiest way for me was the following (if you're on Windows or Linux this step will be different):
 
+	code { 
 	brew update
 	brew upgrade
 	brew tap ethereum/ethereum
 	brew install solidity
-
+	}
+	
 However, installing solidity globally makes things difficult to test. If you're like me, you have contracts that use different versions of solidity, some functionality is not backwards compatible and so I actually took this a step further and used a docker image with multiple versions of solidity installed. then mount a volume on my host machine with the contracts I want to test and run any security tool(s) I wanted. Since I want this tutorial to be beginner friendly, I'd recommend installing Security Toolbox by Trail of Bits which even has a command select-solc to select version of solidity you want to test against. 
 
 # Installing Security Toolbox by Trail of Bits
 
+The first step is to install the correct version of solidity compiler, I'd recommend using docker containers for this (I'm on a MAC book air with an Apple Silicon so I had some issues running containers built for intel or amd 64 architectures but you can also use emulation on QEMU if you're so inclined). 
+
+You can also download the docker image with a number of useful static analysis tools intalled at: https://hub.docker.com/r/trailofbits/eth-security-toolbox
+
 Step 1: Remember to mount a volume on your host machine where you stored the solidity contract that you want to test. Slither can also run multiple files at the same time for quicker iteration with the commands:
 
-docker pull trailofbits/eth-security-toolbox
-docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
+	docker pull trailofbits/eth-security-toolbox
+	docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
 
 ![rollover]({{ BASE_PATH }}/assets/images/splash.png)
 
@@ -69,14 +75,6 @@ Step 2: Run slither with the command
 	
 ![rollover]({{ BASE_PATH }}/assets/images/staticanalyzer.png)
 
-
-The first step is to install the correct version of solidity compiler, I'd recommend using docker containers for this (I'm on a MAC book air with an Apple Silicon so I had some issues running containers built for intel or amd 64 architectures but you can also use emulation on QEMU if you're so inclined). 
-
-You can also download the docker image with a number of useful static analysis tools intalled at: https://hub.docker.com/r/trailofbits/eth-security-toolbox
-
-do a docker pull trailofbits/eth-security-toolbox
-
-then make sure to mount a volume with your solidity contract you want to test.
 
 # What are static analysis tools?
 
@@ -96,9 +94,10 @@ increment() should be declared external:
 	- RolloverExample2.increment() (contract.sol#11-13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 
-# Interpretting results 
+# Interpretting results of Static Analysis Report
 
 From the simple static analysis we can gather that we should probably use an older version of Solidity, one that is perhaps more stable like 0.7.6. This might answer a question I had earlier about why you often seen older versions of solidity in the wild, it' because they're battle tested and thus more trustworthy. 
 
 Another problem we see is we forgot to add the eternal declaration to our decrement and increment functions. This saves us some gas because these functions are never called by our contract. It also links us to some Slither documentation we can read to learn more about this result. 
 
+Regularly scanning our code using linters or static analyzers like Slither will make us better coders. However, it is no replacement for a thorough security audit done by a professional.
