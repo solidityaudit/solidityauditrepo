@@ -21,20 +21,20 @@ In our previous example worked with uint256, but bear with me for a moment. Uint
 
 Let's take a look at a contract that has this flaw. Note that the version of solidity is important, this is given in the pragma after the SPDX-License-Identifier. Because we're using 0.8.0 this contract will not rollover but if we changed version to 0.7.0 and deployed this to main net, it would be extremely insecure. In addition there are several other issues with this contract that we can pick up via a tool like Slither. Let's install solidity and run Slither on the following contract:
 
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.0;
+	// SPDX-License-Identifier: MIT
+	pragma solidity 0.8.0;
 
-contract RolloverExample {
-    uint8 public myUint8;
+	contract RolloverExample {
+	    uint8 public myUint8;
 
-    function decrement() public {
-        myUint8--;
-    }
+	    function decrement() public {
+		myUint8--;
+	    }
 
-    function increment() public {
-        myUint8++;
-    }
-}
+	    function increment() public {
+		myUint8++;
+	    }
+	}
 
 
 # Installing Solidity Compiler
@@ -52,14 +52,16 @@ However, installing solidity globally makes things difficult to test. If you're 
 
 # Installing Security Toolbox by Trail of Bits
 
-The first step is to install the correct version of solidity compiler, I'd recommend using docker containers for this (I'm on a MAC book air with an Apple Silicon so I had some issues running containers built for intel or amd 64 architectures but you can also use emulation on QEMU if you're so inclined). 
+The first step is to install the correct version of solidity compiler, I'd recommend using docker containers for this (I'm on a MAC book air with an Apple Silicon so I had some issues building containers from Dockefile when packages were built for intel or amd 64 architectures but you can also use emulation on QEMU if you're so inclined or try to run Docker engine in emulation mode.). 
 
-You can also download the docker image with a number of useful static analysis tools intalled at: https://hub.docker.com/r/trailofbits/eth-security-toolbox
+You can also download the docker image pre-built with a number of useful static analysis tools intalled at: 
 
 Step 1: Remember to mount a volume on your host machine where you stored the solidity contract that you want to test. Slither can also run multiple files at the same time for quicker iteration with the commands:
 
+	code { 
 	docker pull trailofbits/eth-security-toolbox
 	docker run -v /solidity_contracts:/mnt -it trailofbits/eth-security-toolbox
+	}
 
 ![rollover]({{ BASE_PATH }}/assets/images/splash.png)
 
@@ -101,3 +103,8 @@ From the simple static analysis we can gather that we should probably use an old
 Another problem we see is we forgot to add the eternal declaration to our decrement and increment functions. This saves us some gas because these functions are never called by our contract. It also links us to some Slither documentation we can read to learn more about this result. 
 
 Regularly scanning our code using linters or static analyzers like Slither will make us better coders. However, it is no replacement for a thorough security audit done by a professional.
+
+
+# References:
+
+https://hub.docker.com/r/trailofbits/eth-security-toolbox
