@@ -88,15 +88,12 @@ If you're a developer, it's good practice to run linters or static analysis tool
 
 # Static Analysis Results
 
-Pragma version0.8.0 (contract.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6
-solc-0.8.0 is not recommended for deployment
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+- Pragma version0.8.0 (contract.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6 solc-0.8.0 is not recommended for deployment
+- decrement() should be declared external: - RolloverExample2.decrement() (contract.sol#7-9)
+- increment() should be declared external: - RolloverExample2.increment() (contract.sol#11-13)-
+- Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 
-decrement() should be declared external:
-	- RolloverExample2.decrement() (contract.sol#7-9)
-increment() should be declared external:
-	- RolloverExample2.increment() (contract.sol#11-13)
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+Notice: This tool did NOT capture the vulnerability we pointed out earlie when we tried running it with version 0.7.0 of Solidity. For this reason, an audit should be done on any samrt contract with a professional reading your contract's code and using a wide variety of different tools to identify different classes of bugs and vulnerabilities. 
 
 # Interpretting results of Static Analysis Report
 
