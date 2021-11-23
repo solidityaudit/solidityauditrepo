@@ -103,6 +103,10 @@ Another problem we see is we forgot to add the eternal declaration to our decrem
 
 Regularly scanning our code using linters or static analyzers like Slither will make us better coders. However, it is no replacement for a thorough security audit done by a professional.
 
+# Slitherin Printer Types
+
+Slitherin has various printer types such as a "call graph" printer we can use to generate a call graph. It also has inheritance printers if you want to view the inheritance hierarchy. 
+
 # Key Take-aways
 
 * Static Analysis tools and Linters can help developers catch warnings and bugs before contracts are deployed
