@@ -3,7 +3,7 @@ layout: post
 title:  "Part II: Auditing Smart Contracts with Automated Tools"
 author: sal
 categories: [ Jekyll ]
-image: assets/images/2.jpg
+image: assets/images/mythx.png
 ---
 
 ## Why all these tools for analyzing security in smart contracts?
@@ -22,6 +22,8 @@ Mythx
 
 SmartCheck is an an extensible static analysis tool it converts the solidity smart contract to XML format and then uses xpath expressions to search for vulnerabilities in the code. This type of tool makes it less than ideal for finding more sophisticated attack vectors but is a great tool to be used in combination with Slitherin or when developing your own smart contracts. 
 
+![rollover]({{ BASE_PATH }}/assets/images/smartcheck.png)
+
 ## Myhtril 
 
 Documentation for Mythril project can be found here: https://mythril-classic.readthedocs.io/en/master/mythril.solidity.html
@@ -35,16 +37,23 @@ To demo this tool we simply had to pull the docker image and run the following, 
 Mythril made it easy to fine tune speed vs coverage with the --execution-timeout option as well as conveniently test on chain contracts with their INFURA support and guess what? They even offer a pro version called Mythx which we definitely wanted to check out. 
 
 Limitations: Mythril is targeted at finding common vulnerabilities, and is not able to discover issues in the business logic of an application, this is one reason why a professional audit with manual review phases are required. 
-  
+
 ## Mythx
+  
+  The first step is to create an account
+  
+   ![rollover]({{ BASE_PATH }}/assets/images/mythx-create-account.png)
+
   
 In order to use mythx you need an API key as below
   
   $ export MYTHX_ETH_ADDRESS='0x0000000000000000000000000000000000000000'
   $ export MYTHX_PASSWORD='password'
 
-We signed up for one and we were easily able to integrate Mythx into our favorite IDE as well as use it in the Remix editor for a browser based experienced by enabling the Mythx plugin. 
+
+One of the advantages of Mythx pro is integrating it into our favorite IDE as well as use it in the Remix editor for a browser based experienced by enabling the Mythx plugin. 
   
+  ![rollover]({{ BASE_PATH }}/assets/images/mythx.png)
 
 # Key Take-aways
 
