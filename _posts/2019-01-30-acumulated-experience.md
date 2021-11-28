@@ -3,7 +3,7 @@ layout: post
 title:  "Re-entrancy Attacks: Auditing a real smart contract"
 author: sal
 categories: [ Jekyll, tutorial ]
-image: assets/images/15.jpg
+image: assets/images/audit.png
 ---
 
 ## What are re-entrancy attacks?
@@ -48,6 +48,8 @@ contract HoneyPot {
 # Running our proprietary scanner on the following contract 
 
 Re-Entrancy Vulnerability identified: We are at high risk for this see report below:
+
+![rollover]({{ BASE_PATH }}/assets/images/audit.png)
 
 
 # Additional vulnerabilities we can detect with automated tools
