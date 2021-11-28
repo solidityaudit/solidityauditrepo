@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "About Bundler"
+title:  "Contract auditing Part II: Introduction to Myth"
 author: sal
 categories: [ Jekyll ]
 image: assets/images/2.jpg
