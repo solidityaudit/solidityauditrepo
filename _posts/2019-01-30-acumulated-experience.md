@@ -47,8 +47,8 @@ contract HoneyPot {
 
 # Running our proprietary scanner on the following contract 
 
-Re-Entrancy
-Inject fallback function calls on the function itself, so the process re-enters the function and then go to fallback function again. This loop goes on endlessly and if the function involves transferring, then it will end up with an empty wallet
+Re-Entrancy Vulnerability identified: We are at high risk for this see report below:
+
 
 # Additional vulnerabilities we can detect with automated tools
 
