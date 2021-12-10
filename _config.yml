@@ -22,15 +22,15 @@ authors:
     sal:
       name:           Peter Todds
       site:           https://www.wowthemes.net
-      avatar:         /assets/images/defyfinancecofounder.png
-      bio:            "Hi, I am Peter, the co-founder of Defy Finance"
+      avatar:         /assets/images/defyfinancecofounder2.png
+      bio:            "Hi, I am Peter, the co-founder of Defy Finance and Lead Solidity Auditor"
       email:          wowthemesnet@gmail.com
       twitter:        https://twitter.com/wowthemesnet
 
     jane:
       name:           Susan Kane
       site:           https://www.wowthemes.net
-      avatar:         /assets/images/defyfinancecofounder1.png
+      avatar:         /assets/images/defyfinancecofounder.png
       bio:            "Blogger, Crypto Evangelist, love to meet new people and chat about Solidity!"
       email:          fakemail@gmail.com
       twitter:        https://twitter.com/wowthemesnet
