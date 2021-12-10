@@ -1,8 +1,8 @@
 # Site
-name: 'Underdog Labs'
-description: 'Underdog Shots: Crypto Blog and Community'
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
+name: 'Defy Finance'
+description: 'Crypto Blog and Solidity Auditing Service'
+logo: 'assets/images/DF.jpg'
+favicon: 'assets/images/DF.jpg'
 baseurl: ''
 disqus: 'demowebsite'
 email: ''
@@ -20,18 +20,18 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
+      name:           Peter Todds
       site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      avatar:         /assets/images/defyfinancecofounder.png
+      bio:            "Hi, I am Peter, the co-founder of Defy Finance"
       email:          wowthemesnet@gmail.com
       twitter:        https://twitter.com/wowthemesnet
 
     jane:
-      name:           Jane
+      name:           Susan Kane
       site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
+      avatar:         /assets/images/defyfinancecofounder1.png
+      bio:            "Blogger, Crypto Evangelist, love to meet new people and chat about Solidity!"
       email:          fakemail@gmail.com
       twitter:        https://twitter.com/wowthemesnet
  
