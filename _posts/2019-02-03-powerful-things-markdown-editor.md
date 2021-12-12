@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Part 1: Layman's Guide to Launching an ERC-20 Fungible Token"
-author: Jane
+author: {{ site.authors.sal }}
 categories: [ Open Zeppelin, tutorial, ERC-20, Smart Contracts]
 image: https://thumbs.dreamstime.com/z/russia-moscow-businessman-holding-tablet-logo-erc-official-protocol-ethereum-eth-network-standard-creating-tokens-219590148.jpg
 tags: [ERC-20, Tokens, Smart Contracts]
