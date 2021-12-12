@@ -1,6 +1,6 @@
 # Site
-name: 'Defy Finance'
-description: 'Crypto Blog and Solidity Auditing Service'
+name: 'Defy Finance: A Smart Contract Auditing Service'
+description: 'Smart Contract Auditing Service'
 logo: 'assets/images/DF.jpg'
 favicon: 'assets/images/DF.jpg'
 baseurl: ''
