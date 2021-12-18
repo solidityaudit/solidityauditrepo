@@ -3,17 +3,13 @@ title: "Contact"
 permalink: "/contact.html"
 ---
 
-    <!--==============================
-=            Sponsors            =
-===============================-->
-
 <section class="sponsors section  overlay-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<div class="section-title">
-					<h3>Our <span class="alternate">Sponsors</span></h3>
-					<p>Request to see our work</p>
+					<h3>Our <span class="alternate">Our Security Partners</span></h3>
+					<p>Request to see our previous work, referrals are the heart of our business.</p>
 				</div>
 			</div>
 		</div>
