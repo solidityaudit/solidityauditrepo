@@ -54,21 +54,21 @@ permalink: "/contact.html"
 							<div class="image-block text-center">
 								<a href="#">
 							<img src="{{ BASE_PATH }}/assets/images/sponsor4.png" alt="sponsors-logo" class="img-fluid"  width="50" height="50">								</a>
-								</a>
+								
 							</div>
 						</li>
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
 							<img src="{{ BASE_PATH }}/assets/images/sponsor5.png" alt="sponsors-logo" class="img-fluid"  width="50" height="50">								</a>
-								</a>
+								
 							</div>
 						</li>
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
 							<img src="{{ BASE_PATH }}/assets/images/sponsor6.png" alt="sponsors-logo" class="img-fluid"  width="50" height="50">								</a>
-								</a>
+								
 							</div>
 						</li>
 					</ul>
