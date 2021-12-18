@@ -25,7 +25,7 @@ permalink: "/contact.html"
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
-									<img src="/assets/images/sponsors1.png" alt="sponsors-logo" class="img-fluid">
+									<img src="{{ BASE_PATH }}/assets/images/sponsor1.png" alt="sponsors-logo" class="img-fluid">
 								</a>
 							</div>
 						</li>
