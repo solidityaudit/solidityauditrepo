@@ -13,7 +13,7 @@ permalink: "/contact.html"
 			<div class="col-12">
 				<div class="section-title">
 					<h3>Our <span class="alternate">Sponsors</span></h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore</p>
+					<p>Request to see our work</p>
 				</div>
 			</div>
 		</div>
@@ -29,7 +29,7 @@ permalink: "/contact.html"
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
-									<img src="images/sponsors/pt-spon-two.png" alt="sponsors-logo" class="img-fluid">
+									<img src="/assets/images/sponsors1.png" alt="sponsors-logo" class="img-fluid">
 								</a>
 							</div>
 						</li>
