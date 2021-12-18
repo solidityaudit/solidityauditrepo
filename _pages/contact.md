@@ -8,7 +8,7 @@ permalink: "/contact.html"
 		<div class="row">
 			<div class="col-12">
 				<div class="section-title">
-					<h3>Our <span class="alternate">Our Security Partners</span></h3>
+					<h3>Our <span class="alternate">Our Defi Security Partners</span></h3>
 					<p>Request to see our previous work, referrals are the heart of our business.</p>
 				</div>
 			</div>
@@ -25,29 +25,20 @@ permalink: "/contact.html"
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
-									<img src="{{ BASE_PATH }}/assets/images/sponsor1.png" alt="sponsors-logo" class="img-fluid">
+									<img src="{{ BASE_PATH }}/assets/images/sponsor1.png" alt="sponsors-logo" class="img-fluid"  width="50" height="50">
 								</a>
 							</div>
 						</li>
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
-									<img src="images/sponsors/pt-spon-two.png" alt="sponsors-logo" class="img-fluid">
-								</a>
+									<img src="{{ BASE_PATH }}/assets/images/sponsor2.png" alt="sponsors-logo" class="img-fluid"  width="50" height="50">								</a>
 							</div>
 						</li>
 						<li class="list-inline-item">
 							<div class="image-block text-center">
 								<a href="#">
-									<img src="images/sponsors/pt-spon-three.png" alt="sponsors-logo" class="img-fluid">
-								</a>
-							</div>
-						</li>
-						<li class="list-inline-item">
-							<div class="image-block text-center">
-								<a href="#">
-									<img src="images/sponsors/pt-spon-four.png" alt="sponsors-logo" class="img-fluid">
-								</a>
+							<img src="{{ BASE_PATH }}/assets/images/sponsor3.png" alt="sponsors-logo" class="img-fluid"  width="50" height="50">								</a>
 							</div>
 						</li>
 					</ul>
@@ -82,9 +73,7 @@ permalink: "/contact.html"
 						</li>
 					</ul>
 				</div>
-				<div class="sponsor-btn text-center">
-					<a href="#" class="btn btn-main-md">Become a sponsor</a>
-				</div>
+		
 			</div>
 		</div>
 	</div>
