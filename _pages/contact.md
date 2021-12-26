@@ -80,6 +80,7 @@ permalink: "/contact.html"
 </section>
 
 <!--====  End of Sponsors  ====-->
+
 <!-- modify this form HTML and place wherever you want your form -->
 <form
   action="https://formspree.io/f/xbjwllko"
@@ -90,7 +91,7 @@ permalink: "/contact.html"
     <input type="email" name="_replyto">
   </label>
   <label>
-    Project Details:
+    Your message:
     <textarea name="message"></textarea>
   </label>
   <!-- your other form fields go here -->
